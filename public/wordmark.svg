@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="48" viewBox="0 0 280 48" role="img" aria-labelledby="title">
+  <title id="title">MS Catalani Contabilidade</title>
+  <rect x="1" y="6" width="36" height="36" fill="none" stroke="#C9A86A" stroke-width="1.25"/>
+  <rect x="4.5" y="9.5" width="29" height="29" fill="none" stroke="#C9A86A" stroke-opacity="0.45" stroke-width="0.75"/>
+  <text x="19" y="30" text-anchor="middle" fill="#C9A86A" font-family="Georgia, serif" font-size="13" font-weight="600">MC</text>
+  <text x="50" y="24" fill="#F6F1E8" font-family="Georgia, serif" font-size="18" font-weight="600" letter-spacing="2.2">MS CATALANI</text>
+  <text x="50" y="38" fill="#C9A86A" font-family="system-ui, sans-serif" font-size="8" font-weight="500" letter-spacing="3.8">CONTABILIDADE</text>
+</svg>
