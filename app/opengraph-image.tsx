@@ -1,11 +1,18 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "MS Catalani | Contabilidade";
+export const alt = "MS Catalani Contabilidade — Excelência que organiza, confiança que transforma";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logo = await readFile(
+    join(process.cwd(), "public/brand/logo-completa.png"),
+    "base64",
+  );
+
   return new ImageResponse(
     (
       <div
@@ -13,53 +20,51 @@ export default function OpenGraphImage() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "space-between",
-          background: "#0E1C2F",
-          color: "#F6F1E8",
-          padding: 72,
+          background: "#EDDFD6",
+          color: "#6B5F4F",
+          padding: "72px 96px",
         }}
       >
         <div
           style={{
-            position: "absolute",
-            inset: 32,
-            border: "1px solid rgba(201,168,106,0.35)",
-          }}
-        />
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div
-            style={{
-              fontSize: 18,
-              letterSpacing: "0.32em",
-              textTransform: "uppercase",
-              color: "#C9A86A",
-            }}
-          >
-            MS Catalani · Contabilidade
-          </div>
-          <div
-            style={{
-              fontSize: 64,
-              lineHeight: 1.12,
-              maxWidth: 900,
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Clareza fiscal para o seu negócio crescer com segurança.
-          </div>
-        </div>
-        <div
-          style={{
             display: "flex",
-            justifyContent: "space-between",
-            fontSize: 22,
-            color: "rgba(246,241,232,0.7)",
+            flexDirection: "column",
+            maxWidth: 560,
           }}
         >
-          <span>Abertura · MEI · Fiscal · Folha · Tributos</span>
-          <span style={{ color: "#C9A86A" }}>@ms_catalani</span>
+          <div
+            style={{
+              fontSize: 20,
+              letterSpacing: "0.28em",
+              textTransform: "uppercase",
+              color: "#916940",
+            }}
+          >
+            Contadora há 19 anos
+          </div>
+          <div
+            style={{
+              marginTop: 28,
+              fontSize: 60,
+              lineHeight: 1.12,
+              fontFamily: "Georgia, serif",
+              color: "#4A4034",
+            }}
+          >
+            Transformo números em resultados reais.
+          </div>
+          <div style={{ marginTop: 32, fontSize: 24 }}>
+            MEI · IR · Fiscal · Folha · @ms_catalani
+          </div>
         </div>
+        <img
+          src={`data:image/png;base64,${logo}`}
+          width={390}
+          height={451}
+          alt=""
+        />
       </div>
     ),
     size,

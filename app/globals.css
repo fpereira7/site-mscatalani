@@ -1,23 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0e1c2f;
-  --navy-deep: #08121f;
-  --gold: #c9a86a;
-  --gold-soft: #e0cc9a;
-  --cream: #f6f1e8;
-  --offwhite: #fcfaf6;
-  --ink: #1c1917;
-  --muted: #5c574e;
+  --nude: #eddfd6;
+  --nude-soft: #f3e9e2;
+  --cream: #f8f3ee;
+  --offwhite: #fdfbf9;
+  --olive: #6b5f4f;
+  --olive-deep: #4a4034;
+  --bronze: #a8794e;
+  --bronze-deep: #916940;
+  --bronze-light: #c29c79;
+  --ink: #3a3128;
+  --muted: #655b50;
 }
 
 @theme inline {
-  --color-navy: var(--navy);
-  --color-navy-deep: var(--navy-deep);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
+  --color-nude: var(--nude);
+  --color-nude-soft: var(--nude-soft);
   --color-cream: var(--cream);
   --color-offwhite: var(--offwhite);
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
+  --color-bronze: var(--bronze);
+  --color-bronze-deep: var(--bronze-deep);
+  --color-bronze-light: var(--bronze-light);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --font-sans: var(--font-outfit);
@@ -40,28 +46,31 @@ body {
   font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
-body::after {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 70;
-  opacity: 0.045;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
-}
-
 ::selection {
-  background: color-mix(in srgb, var(--gold) 45%, transparent);
-  color: var(--navy-deep);
+  background: color-mix(in srgb, var(--bronze-light) 45%, transparent);
+  color: var(--olive-deep);
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--olive);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bronze-deep), var(--bronze-light));
+}
+
+.bg-olive-deep .eyebrow {
+  color: var(--nude);
 }
 
 .hairline {
@@ -69,13 +78,16 @@ body::after {
   background: linear-gradient(
     90deg,
     transparent,
-    color-mix(in srgb, var(--gold) 70%, transparent),
+    color-mix(in srgb, var(--bronze) 60%, transparent),
     transparent
   );
 }
 
-.gold-frame {
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 38%, transparent);
+.bronze-rule {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bronze-deep), var(--bronze-light));
 }
 
 @keyframes fade-up {
@@ -119,7 +131,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--bronze);
   outline-offset: 3px;
 }
 

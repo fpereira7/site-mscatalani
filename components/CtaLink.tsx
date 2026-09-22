@@ -4,7 +4,7 @@ import { primaryCta } from "@/lib/site";
 type CtaLinkProps = {
   href?: string;
   children: ReactNode;
-  variant?: "solid" | "ghost" | "light";
+  variant?: "solid" | "ghost";
   className?: string;
 };
 
@@ -20,11 +20,9 @@ export function CtaLink({
 
   const styles = {
     solid:
-      "bg-gold text-navy-deep hover:-translate-y-px hover:bg-gold-soft shadow-[0_1px_0_rgba(14,28,47,0.12)]",
+      "bg-olive text-cream hover:-translate-y-px hover:bg-olive-deep shadow-[0_8px_24px_-12px_rgba(74,64,52,0.55)]",
     ghost:
-      "border border-gold/45 text-cream hover:border-gold hover:bg-gold/10",
-    light:
-      "border border-navy/15 bg-offwhite text-navy hover:border-gold hover:text-navy",
+      "border border-olive/35 text-olive-deep hover:border-olive hover:bg-olive/5",
   }[variant];
 
   return (

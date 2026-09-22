@@ -37,19 +37,19 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${
         scrolled || open
-          ? "border-b border-gold/20 bg-navy/95 backdrop-blur-md"
-          : "bg-navy/70 backdrop-blur-sm"
+          ? "border-b border-olive/10 bg-cream/95 backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
       <a
         href="#conteudo"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-gold focus:px-3 focus:py-2 focus:text-navy-deep"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-olive focus:px-3 focus:py-2 focus:text-cream"
       >
         Ir para o conteúdo
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-5 md:px-8">
         <a href="#topo" aria-label="MS Catalani — início">
-          <Wordmark />
+          <Wordmark priority />
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Principal">
@@ -57,7 +57,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[0.72rem] font-medium tracking-[0.16em] text-cream/75 uppercase transition hover:text-gold"
+              className="text-[0.72rem] font-medium tracking-[0.16em] text-olive uppercase transition hover:text-olive-deep"
             >
               {item.label}
             </a>
@@ -70,7 +70,7 @@ export function Header() {
 
         <button
           type="button"
-          className="relative flex size-11 items-center justify-center text-cream lg:hidden"
+          className="relative flex size-11 items-center justify-center text-olive-deep lg:hidden"
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -91,14 +91,14 @@ export function Header() {
       {open ? (
         <div
           id="menu-mobile"
-          className="border-t border-gold/20 bg-navy px-5 py-8 lg:hidden"
+          className="border-t border-olive/10 bg-cream px-5 py-8 lg:hidden"
         >
           <nav className="flex flex-col gap-5" aria-label="Mobile">
             {nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="font-serif text-2xl text-cream"
+                className="font-serif text-2xl text-olive-deep"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

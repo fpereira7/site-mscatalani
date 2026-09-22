@@ -1,13 +1,22 @@
 export const site = {
   name: "MS Catalani",
   legalName: "MS Catalani Contabilidade",
-  tagline: "Contabilidade",
+  url: "https://ms-catalani.onrender.com",
+  tagline: "Excelência que organiza. Confiança que transforma.",
+  slogan: ["Excelência que organiza", "Confiança que transforma"],
   description:
-    "Escritório de contabilidade com atendimento próximo e linguagem clara. Abertura de empresa, MEI, rotina fiscal, folha e consultoria tributária.",
+    "MS Catalani Contabilidade — excelência que organiza, confiança que transforma. Contadora há 19 anos: abertura de empresa, MEI, IR, rotina fiscal, folha e consultoria tributária.",
+  ownerName: "Michelle Catalani",
   instagramUrl: "https://www.instagram.com/ms_catalani/",
   instagramHandle: "@ms_catalani",
+  ownerInstagramUrl: "https://www.instagram.com/michellecatalani/",
+  ownerInstagramHandle: "@michellecatalani",
+  email: "mscatalanic@gmail.com",
+  documentsEmail: "mscatalanicontabilidade@gmail.com",
+  hours: "Horário comercial, de segunda a sexta",
+  phoneDisplay: "(21) 98466-8722",
   /** DDI + DDD + número, só dígitos. Ex.: 5521999999999 */
-  whatsappNumber: "5521987611124",
+  whatsappNumber: "5521984668722",
   whatsappPrefill:
     "Olá! Vim pelo site da MS Catalani e gostaria de conversar sobre contabilidade.",
 } as const;
@@ -57,6 +66,10 @@ export const services = [
     body: "Acompanhamento do MEI e o momento certo de migrar — para não crescer no regime errado nem pagar imposto a mais.",
   },
   {
+    title: "Imposto de Renda",
+    body: "Declaração de IRPF, conferência de rendimentos e orientação para o empresário e a pessoa física — sem deixar documento ou prazo para trás.",
+  },
+  {
     title: "Rotina fiscal",
     body: "Apuração, obrigações acessórias e prazos em dia. Você recebe o que precisa decidir, sem surpresa na fiscalização.",
   },
@@ -68,17 +81,13 @@ export const services = [
     title: "Consultoria tributária",
     body: "Simples Nacional, Lucro Presumido ou Lucro Real: análise do regime, da carga e das obrigações que realmente cabem à empresa.",
   },
-  {
-    title: "Organização financeira",
-    body: "Apoio para o empresário enxergar o caixa, as contas e a rotina — a ponta que liga a contabilidade à decisão do dia a dia.",
-  },
 ] as const;
 
 export const trustItems = [
   {
-    label: "Rotina",
-    title: "Fiscal em dia",
-    body: "Obrigações, prazos e entregas acompanhados com método.",
+    label: "Trajetória",
+    title: "19 anos de contabilidade",
+    body: "Experiência de quem acompanha empresa, regime e obrigação no dia a dia.",
   },
   {
     label: "Regimes",
@@ -91,55 +100,73 @@ export const trustItems = [
     body: "Um interlocutor que explica, em vez de só enviar guia.",
   },
   {
-    label: "Linguagem",
-    title: "Clareza primeiro",
-    body: "Decisões tributárias traduzidas sem jargão desnecessário.",
+    label: "Resultado",
+    title: "Números que decidem",
+    body: "Clareza fiscal para o negócio crescer com segurança.",
   },
 ] as const;
 
 export const steps = [
   {
     n: "01",
-    title: "Conversa inicial",
-    body: "Você conta o momento da empresa: abertura, troca de contador, MEI ou rotina que precisa de ordem.",
+    title: "Documentação",
+    body: "Você encaminha a documentação necessária — identificação, CPF, comprovante de residência e cartão CNPJ, se houver.",
   },
   {
     n: "02",
-    title: "Diagnóstico",
-    body: "Olhamos documentos, regime e obrigações. O que está em dia, o que precisa regularizar, o que pode ser mais simples.",
+    title: "Análise",
+    body: "Fazemos a análise completa das informações para garantir segurança antes de qualquer procedimento.",
   },
   {
     n: "03",
-    title: "Enquadramento",
-    body: "Definimos o caminho — constituição, migração ou ajuste da rotina — com prazos e responsabilidades claros.",
+    title: "Procedimentos",
+    body: "Iniciamos os procedimentos conforme a sua necessidade: abertura, regularização, troca de contador ou rotina.",
   },
   {
     n: "04",
-    title: "Acompanhamento",
-    body: "A contabilidade entra no ritmo do negócio: fiscal, folha e um canal direto para tirar dúvida quando ela aparece.",
+    title: "Orientações",
+    body: "Ao concluir, você recebe todas as orientações e confirmações — e segue com um canal direto para dúvidas.",
+  },
+] as const;
+
+export const clientRoutine = [
+  {
+    day: "02",
+    title: "Departamento pessoal",
+    body: "Atestados, faltas, horas extras, comissões e férias do mês.",
+  },
+  {
+    day: "05",
+    title: "Documentos contábeis",
+    body: "XML das notas, serviços tomados, extratos e relatório de despesas, em PDF.",
+  },
+  {
+    day: "20",
+    title: "Impostos",
+    body: "DAS, INSS, FGTS e ICMS — prazo em dia evita multa.",
   },
 ] as const;
 
 export const instagramPosts = [
   {
     kicker: "MEI",
-    title: "Quando é hora de deixar o MEI?",
-    body: "Faturamento, nota fiscal e contratação mudam o jogo. O regime certo evita multa e imposto no escuro.",
+    title: "Desenquadramento do MEI",
+    body: "Faturamento, nota e contratação mudam o regime. O momento certo evita multa e imposto no escuro.",
   },
   {
-    kicker: "Abertura",
-    title: "Abrir empresa sem surpresa",
-    body: "CNAE, contrato e enquadramento tributário definidos antes do CNPJ — não depois da primeira guia.",
+    kicker: "IR",
+    title: "Imposto de Renda sem susto",
+    body: "Declaração, despesas médicas e o que realmente entra na apuração — com prazo e documento em ordem.",
   },
   {
-    kicker: "Fiscal",
-    title: "Obrigação acessória em dia",
-    body: "DCTF, EFD, DEFIS e as entregas do seu regime. Quem atrasa, paga duas vezes: multa e tempo.",
+    kicker: "GOV",
+    title: "Senha GOV e dois fatores",
+    body: "Acesso da empresa não se compartilha no escuro. Verificação em duas etapas é o mínimo de segurança.",
   },
   {
-    kicker: "Tributos",
-    title: "Simples, Presumido ou Real?",
-    body: "Não existe regime “melhor”. Existe o que cabe à margem, à atividade e ao momento da empresa.",
+    kicker: "Reforma",
+    title: "Regras novas, rotina em dia",
+    body: "O que muda no MEI e no IR precisa virar calendário — não um post que você vê e esquece.",
   },
 ] as const;
 
@@ -147,6 +174,10 @@ export const faqs = [
   {
     q: "Vocês atendem MEI?",
     a: "Sim. Acompanhamos o MEI e, principalmente, o ponto em que ele deixa de ser o melhor enquadramento — para a migração acontecer no tempo certo, não na fiscalização.",
+  },
+  {
+    q: "Vocês fazem Imposto de Renda?",
+    a: "Sim. IRPF entra no atendimento: declaração, conferência de rendimentos e o que precisa estar documentado. No Instagram o destaque IR reúne o que mais gera dúvida na época da entrega.",
   },
   {
     q: "Como funciona a troca de contador?",
@@ -163,9 +194,5 @@ export const faqs = [
   {
     q: "Em quanto tempo a rotina começa?",
     a: "Depende da documentação e de haver ou não pendências anteriores. Depois do diagnóstico, alinhamos um calendário objetivo: o que entra na primeira quinzena e o que fica para o ciclo seguinte.",
-  },
-  {
-    q: "Vocês ajudam com emissão de nota fiscal?",
-    a: "Orientamos o enquadramento, a inscrição e o fluxo para a empresa emitir corretamente. A emissão do dia a dia continua com você; a contabilidade garante que o que foi emitido feche com a apuração.",
   },
 ] as const;

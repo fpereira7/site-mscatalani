@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -17,6 +17,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
     default: "MS Catalani | Contabilidade",
     template: "%s | MS Catalani",
@@ -28,11 +29,12 @@ export const metadata: Metadata = {
     "MS Catalani",
     "abertura de empresa",
     "MEI",
+    "Imposto de Renda",
     "consultoria tributária",
     "Simples Nacional",
     "folha de pagamento",
   ],
-  authors: [{ name: site.legalName }],
+  authors: [{ name: site.ownerName }, { name: site.legalName }],
   openGraph: {
     title: "MS Catalani | Contabilidade",
     description: site.description,
@@ -52,6 +54,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#EDDFD6",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# original brand files from the client (web exports live in public/brand)
+/NOVA LOGO - MSCATALANI/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

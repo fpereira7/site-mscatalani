@@ -6,7 +6,16 @@ export function JsonLd() {
     "@type": "AccountingService",
     name: site.legalName,
     alternateName: site.name,
+    slogan: site.tagline,
     description: site.description,
+    telephone: `+${site.whatsappNumber}`,
+    email: site.email,
+    founder: {
+      "@type": "Person",
+      name: site.ownerName,
+      jobTitle: "Contadora",
+      sameAs: [site.ownerInstagramUrl],
+    },
     sameAs: [site.instagramUrl],
     areaServed: {
       "@type": "Country",
@@ -15,6 +24,7 @@ export function JsonLd() {
     serviceType: [
       "Abertura de empresa",
       "MEI",
+      "Imposto de Renda",
       "Rotina fiscal",
       "Folha de pagamento",
       "Consultoria tributária",
