@@ -11,7 +11,7 @@ export const site = {
   instagramHandle: "@ms_catalani",
   ownerInstagramUrl: "https://www.instagram.com/michellecatalani/",
   ownerInstagramHandle: "@michellecatalani",
-  email: "mscatalanic@gmail.com",
+  email: "mscatalani@gmail.com",
   documentsEmail: "mscatalanicontabilidade@gmail.com",
   hours: "Horário comercial, de segunda a sexta",
   phoneDisplay: "(21) 98466-8722",
