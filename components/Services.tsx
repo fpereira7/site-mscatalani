@@ -1,24 +1,12 @@
 import { CtaLink } from "@/components/CtaLink";
-import {
-  IconBuilding,
-  IconChart,
-  IconId,
-  IconLedger,
-  IconPeople,
-  IconScale,
-} from "@/components/Icons";
-import { services } from "@/lib/site";
+import { IconBuilding, IconChart, IconScale } from "@/components/Icons";
+import { extraServices, primaryCta, serviceGroups } from "@/lib/site";
 
-const icons = [
-  IconBuilding,
-  IconId,
-  IconScale,
-  IconLedger,
-  IconPeople,
-  IconChart,
-];
+const icons = [IconBuilding, IconScale, IconChart];
 
 export function Services() {
+  const cta = primaryCta();
+
   return (
     <section id="servicos" className="bg-cream px-5 py-24 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
@@ -28,31 +16,64 @@ export function Services() {
             O que cuidamos por você
           </h2>
           <p className="mt-4 max-w-xl text-[1.05rem] leading-relaxed text-muted">
-            Serviços de escritório contábil — da constituição da empresa ao IR
-            e à rotina mensal — com foco no que o empresário precisa decidir.
+            Da abertura da empresa à regularização, aos tributos e ao Imposto
+            de Renda — com foco no que o empresário precisa decidir.
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-px bg-olive/10 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
+        <ul className="mt-14 grid gap-px bg-olive/10 lg:grid-cols-3">
+          {serviceGroups.map((group, index) => {
             const Icon = icons[index];
             return (
-              <li key={service.title} className="bg-cream p-8 md:p-9">
+              <li key={group.title} className="bg-cream p-8 md:p-9">
                 <span className="inline-flex text-bronze-deep">
                   <Icon className="size-7" />
                 </span>
-                <h3 className="mt-5 font-serif text-2xl text-olive-deep">
-                  {service.title}
+                <h3 className="mt-5 font-serif text-3xl text-olive-deep">
+                  {group.title}
                 </h3>
-                <p className="mt-3 text-[0.95rem] leading-relaxed text-muted">
-                  {service.body}
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">
+                  {group.body}
                 </p>
+                <div className="hairline mt-6" />
+                <ul className="mt-6 space-y-3.5">
+                  {group.items.map((item) => (
+                    <li key={item.label} className="flex gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="mt-[0.7rem] h-px w-3 shrink-0 bg-bronze"
+                      />
+                      <span>
+                        <span className="block text-[0.95rem] leading-snug text-olive-deep">
+                          {item.label}
+                        </span>
+                        {item.detail ? (
+                          <span className="mt-1 block text-sm leading-snug text-muted">
+                            {item.detail}
+                          </span>
+                        ) : null}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </li>
             );
           })}
         </ul>
 
-        <div className="mt-12">
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
+          {extraServices.lead}{" "}
+          <a
+            href={cta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-olive-deep underline decoration-bronze/60 underline-offset-4 transition hover:decoration-bronze"
+          >
+            {extraServices.text}
+          </a>
+        </p>
+
+        <div className="mt-10">
           <CtaLink variant="ghost">Quero conversar sobre o meu caso</CtaLink>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const site = {
   tagline: "Excelência que organiza. Confiança que transforma.",
   slogan: ["Excelência que organiza", "Confiança que transforma"],
   description:
-    "MS Catalani Contabilidade — excelência que organiza, confiança que transforma. Contadora há 19 anos: abertura de empresa, MEI, IR, rotina fiscal, folha e consultoria tributária.",
+    "MS Catalani Contabilidade — excelência que organiza, confiança que transforma. Mais de 20 anos de contabilidade, a maior parte em multinacionais: abertura de empresa, MEI, IR, rotina fiscal, folha e consultoria tributária.",
   ownerName: "Michelle Catalani",
   instagramUrl: "https://www.instagram.com/ms_catalani/",
   instagramHandle: "@ms_catalani",
@@ -56,38 +56,58 @@ export const nav = [
   { href: "#contato", label: "Contato" },
 ] as const;
 
-export const services = [
+type ServiceItem = { label: string; detail?: string };
+
+export const serviceGroups: {
+  title: string;
+  body: string;
+  items: ServiceItem[];
+}[] = [
   {
-    title: "Abertura e regularização",
-    body: "Constituição de empresa, enquadramento e regularização cadastral com orientação sobre o caminho mais adequado ao seu negócio.",
+    title: "Empresa",
+    body: "Da abertura ao encerramento, com a estrutura em dia.",
+    items: [
+      { label: "Abertura de empresa" },
+      { label: "Alteração contratual" },
+      { label: "Distrato e encerramento de empresa" },
+      { label: "Registro de marcas" },
+      { label: "Folha e departamento pessoal" },
+    ],
   },
   {
-    title: "MEI e mudança de regime",
-    body: "Acompanhamento do MEI e o momento certo de migrar — para não crescer no regime errado nem pagar imposto a mais.",
+    title: "Regularização",
+    body: "Pendências resolvidas e situação fiscal clara.",
+    items: [
+      {
+        label: "Regularização de pendências",
+        detail: "MEI · Simples Nacional · Lucro Presumido · Lucro Real",
+      },
+      { label: "Certidões e levantamento de situação fiscal" },
+      { label: "Parcelamento e regularização de débitos" },
+    ],
   },
   {
-    title: "Imposto de Renda",
-    body: "Declaração de IRPF, conferência de rendimentos e orientação para o empresário e a pessoa física — sem deixar documento ou prazo para trás.",
+    title: "Tributário",
+    body: "Imposto certo, no regime certo, no prazo certo.",
+    items: [
+      { label: "Análise tributária" },
+      { label: "Planejamento tributário" },
+      { label: "Rotina fiscal e obrigações acessórias" },
+      { label: "Imposto de Renda pessoa física e jurídica" },
+    ],
   },
-  {
-    title: "Rotina fiscal",
-    body: "Apuração, obrigações acessórias e prazos em dia. Você recebe o que precisa decidir, sem surpresa na fiscalização.",
-  },
-  {
-    title: "Folha e departamento pessoal",
-    body: "Admissões, folhas, encargos e rotinas trabalhistas com organização, para a operação não parar no meio do mês.",
-  },
-  {
-    title: "Consultoria tributária",
-    body: "Simples Nacional, Lucro Presumido ou Lucro Real: análise do regime, da carga e das obrigações que realmente cabem à empresa.",
-  },
-] as const;
+];
+
+export const extraServices = {
+  lead: "Também ajudamos com",
+  text: "emissão e renovação de passaporte e autorizações eletrônicas de viagem internacional (ETA e similares).",
+};
 
 export const trustItems = [
   {
     label: "Trajetória",
-    title: "19 anos de contabilidade",
-    body: "Experiência de quem acompanha empresa, regime e obrigação no dia a dia.",
+    title: "Mais de 20 anos de carreira",
+    body: "Construída em multinacionais e empresas de grandes nomes do mercado.",
   },
   {
     label: "Regimes",
@@ -177,7 +197,7 @@ export const faqs = [
   },
   {
     q: "Vocês fazem Imposto de Renda?",
-    a: "Sim. IRPF entra no atendimento: declaração, conferência de rendimentos e o que precisa estar documentado. No Instagram o destaque IR reúne o que mais gera dúvida na época da entrega.",
+    a: "Sim, para pessoa física e jurídica. No IRPF: declaração, conferência de rendimentos e o que precisa estar documentado. No IRPJ: apuração conforme o regime da empresa. No Instagram o destaque IR reúne o que mais gera dúvida na época da entrega.",
   },
   {
     q: "Como funciona a troca de contador?",

@@ -10,13 +10,14 @@ export function Hero() {
     <section id="topo" className="relative overflow-hidden bg-nude text-ink">
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pt-32 pb-24 md:px-8 md:pt-40 md:pb-32 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
         <div>
-          <p className="eyebrow reveal">Contadora há 19 anos</p>
+          <p className="eyebrow reveal">Padrão de multinacional</p>
           <h1 className="reveal reveal-delay-1 mt-6 max-w-xl font-serif text-4xl leading-[1.1] font-medium text-balance text-olive-deep sm:text-5xl lg:text-[3.5rem]">
             Transformo números em resultados reais.
           </h1>
           <p className="reveal reveal-delay-2 mt-6 max-w-lg text-[1.05rem] leading-relaxed text-muted">
-            Contabilidade consultiva para quem precisa de rotina em dia, regime
-            certo e orientação clara — MEI, IR, fiscal e folha, sem jargão.
+            Mais de 20 anos de contabilidade, a maior parte em multinacionais e
+            empresas de grandes nomes do mercado. O mesmo rigor, agora dedicado
+            à sua empresa.
           </p>
           <div className="reveal reveal-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink>

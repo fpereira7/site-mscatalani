@@ -42,7 +42,7 @@ export default async function OpenGraphImage() {
               color: "#916940",
             }}
           >
-            Contadora há 19 anos
+            Mais de 20 anos · Padrão de multinacional
           </div>
           <div
             style={{

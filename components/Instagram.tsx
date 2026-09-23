@@ -37,11 +37,11 @@ export function Instagram() {
                 rel="noopener noreferrer"
                 className="group flex h-full flex-col bg-offwhite p-6 shadow-[0_18px_36px_-30px_rgba(74,64,52,0.5)] transition duration-300 hover:-translate-y-1"
               >
-                <span className="relative flex aspect-square items-center justify-center bg-nude">
+                <span className="relative flex aspect-square items-center justify-center overflow-hidden bg-nude">
                   <svg
                     viewBox="0 0 100 100"
                     aria-hidden="true"
-                    className="absolute inset-[10%] transition duration-500 group-hover:rotate-12"
+                    className="absolute top-[10%] left-[10%] h-[80%] w-[80%] transition duration-500 group-hover:rotate-12"
                   >
                     <defs>
                       <linearGradient id={`ring-${post.kicker}`} x1="0" y1="0" x2="1" y2="1">
@@ -51,7 +51,7 @@ export function Instagram() {
                       </linearGradient>
                     </defs>
                     <path
-                      d="M 78 18 A 44 44 0 1 0 86 28"
+                      d="M 70.6 11.1 A 44 44 0 1 0 84.7 22.9"
                       fill="none"
                       stroke={`url(#ring-${post.kicker})`}
                       strokeWidth="1.6"

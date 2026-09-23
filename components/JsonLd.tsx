@@ -23,11 +23,14 @@ export function JsonLd() {
     },
     serviceType: [
       "Abertura de empresa",
-      "MEI",
-      "Imposto de Renda",
-      "Rotina fiscal",
+      "Alteração contratual",
+      "Encerramento de empresa",
+      "Regularização fiscal",
+      "Parcelamento de débitos",
+      "Planejamento tributário",
+      "Imposto de Renda pessoa física e jurídica",
+      "Registro de marcas",
       "Folha de pagamento",
-      "Consultoria tributária",
     ],
   };
 
